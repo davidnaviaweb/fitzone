@@ -25,7 +25,7 @@ Prototipo de aplicación web diseñada para centralizar toda la información rel
 
 3. Clona el repositorio:
    ```bash
-   $ cd ~ && git clone https://github.com/lucaramirezo/FitZone/
+   $ cd ~ && git clone https://github.com/davidnaviaweb/FitZone/
    ```
 
 4. Levanta el servidor
