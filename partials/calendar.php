@@ -31,6 +31,15 @@
             </div>
         </div>
     </div>
+    <!-- Modal de Confirmación -->
+    <div id="confirm-modal" class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-6 w-11/12 max-w-md text-center">
+            <h3 id="confirmTitle" class="text-xl font-bold mb-4">Reserva Confirmada</h3>
+            <p id="confirmMessage" class="text-gray-700 mb-6">Tu plaza ha sido reservada con éxito.</p>
+            <button onclick="closeConfirmModal()"
+                class="bg-sky-600 text-white px-5 py-2 rounded hover:bg-sky-700">Aceptar</button>
+        </div>
+    </div>
 </section>
 
 <script>
@@ -133,14 +142,26 @@
 
         actionBtn.onclick = function () {
             if (remaining > 0) {
-                alert(`Has reservado una plaza para ${event.title} a las ${startTime} horas.`);
+                showConfirmationModal(`Reserva confirmada`, `Has reservado una plaza para <strong>${event.title}</strong> a las ${startTime}`, `text-sky-700`);
             } else {
-                alert(`Te has unido a la lista de espera para ${event.title} a las ${startTime} horas.`);
+                showConfirmationModal(`En lista de espera`, `Te has unido a la <strong>lista de espera</strong> para <strong>${event.title}</strong> a las ${startTime}`, `text-orange-500`);
             }
             closeModal();
         };
 
         document.getElementById('modal').classList.remove('hidden');
+    }
+
+    function showConfirmationModal(title, message, color) {
+        const titleEl = document.getElementById('confirmTitle')
+        titleEl.innerHTML = title;
+        titleEl.className = `text-xl font-bold mb-4 ${color}`;
+        document.getElementById('confirmMessage').innerHTML = message;
+        document.getElementById('confirm-modal').classList.remove('hidden');
+    }
+
+    function closeConfirmModal() {
+        document.getElementById('confirm-modal').classList.add('hidden');
     }
 
     function closeModal() {
