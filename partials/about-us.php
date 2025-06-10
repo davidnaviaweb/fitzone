@@ -1,5 +1,5 @@
 <!-- Sobre el Gimnasio -->
-<section id="info" class="bg-white py-20 px-6">
+<section id="sobre-nosotros" class="py-20 px-6">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-4xl font-bold text-center text-orange-500 mb-12">Conoce FitZone</h2>
 

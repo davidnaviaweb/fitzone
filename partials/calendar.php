@@ -1,4 +1,4 @@
-<section class="px-4 sm:px-8 py-12">
+<section id="calendario" class="px-4 sm:px-8 py-12">
     <h2 class="text-3xl text-sky-700 font-bold mb-6 text-center">Calendario de Actividades</h2>
     <p class="text-center text-gray-600 mb-8">Consulta nuestro calendario para ver las actividades programadas y sus
         horarios.</p>

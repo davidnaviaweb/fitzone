@@ -61,19 +61,7 @@
                 <ul class="flex flex-col md:flex-row md:space-x-6 text-base font-medium">
                     <li class="content-center">
                         <a href="/"
-                            class="block py-2 md:py-0 hover:text-orange-600 hover:underline underline-offset-4 decoration-2 transition">Inicio</a>
-                    </li>
-                    <li class="content-center">
-                        <a href="#actividades"
-                            class="block py-2 md:py-0 hover:text-orange-600 hover:underline underline-offset-4 decoration-2 transition">Actividades</a>
-                    </li>
-                    <li class="content-center">
-                        <a href="#tarifas"
-                            class="block py-2 md:py-0 hover:text-orange-600 hover:underline underline-offset-4 decoration-2 transition">Tarifas</a>
-                    </li>
-                    <li class="content-center">
-                        <a href="#sobre-nosotros"
-                            class="block py-2 md:py-0 hover:text-orange-600 hover:underline underline-offset-4 decoration-2 transition">Conócenos</a>
+                            class="block py-2 md:py-0 hover:text-orange-600 hover:underline underline-offset-4 decoration-2 transition">Volver al inicio</a>
                     </li>
                     <li>
                         <!-- Avatar escritorio -->
@@ -84,7 +72,6 @@
                                 <span class="font-medium text-gray-700">Juan</span>
                             </a>
                         </div>
-
                     </li>
                 </ul>
             </nav>
@@ -97,10 +84,7 @@
         <div id="mobile-menu"
             class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-100">
             <ul class="flex flex-col gap-4 py-4 px-2 text-base font-medium">
-                <li><a href="/" class="block px-4 py-2 hover:bg-blue-50 rounded">Inicio</a></li>
-                <li><a href="#actividades" class="block px-4 py-2 hover:bg-blue-50 rounded">Actividades</a></li>
-                <li><a href="#tarifas" class="block px-4 py-2 hover:bg-blue-50 rounded">Tarifas</a></li>
-                <li><a href="#sobre-nosotros" class="block px-4 py-2 hover:bg-blue-50 rounded">Conócenos</a></li>
+                <li><a href="/" class="block px-4 py-2 hover:bg-blue-50 rounded">Volver al inicio</a></li>
             </ul>
             <!-- Avatar móvil debajo del menú -->
             <div class="border-t mt-4 pt-4 px-4 flex items-center gap-3 cursor-pointer">
