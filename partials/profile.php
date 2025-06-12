@@ -33,7 +33,8 @@
 
         <!-- Reservas Activas -->
         <div class="bg-white rounded-2xl shadow-md p-8">
-            <div class="flex justify-between items-center mb-6">
+            <div
+                class="flex flex-col sm:flex-row gap-2 justify-center sm:justify-between items-center  text-center sm:text-start mb-6">
                 <h2 class="text-2xl font-bold text-sky-700">Reservas activas</h2>
 
                 <!-- Filtro -->
@@ -42,7 +43,7 @@
             </div>
 
             <div class="overflow-x-auto">
-                <table class="min-w-full text-sm border-separate border-spacing-y-3">
+                <table class="min-w-full text-sm border-separate border-spacing-y-3 hidden md:table">
                     <thead class="text-left text-gray-600">
                         <tr>
                             <th class="px-4 py-2">Clase</th>
@@ -54,12 +55,14 @@
                         </tr>
                     </thead>
                     <tbody class="text-gray-800">
+                        <!-- Fila estándar -->
                         <tr class="bg-slate-100 rounded-lg">
                             <td class="px-4 py-3 font-medium">Bodypump</td>
                             <td class="px-4 py-3">10/06/2025</td>
                             <td class="px-4 py-3">19:00 - 20:00</td>
                             <td class="px-4 py-3">Laura Sánchez</td>
-                            <td class="px-4 py-3"><span
+                            <td class="px-4 py-3">
+                                <span
                                     class="px-2 py-1 text-green-700 bg-green-100 rounded-full text-xs font-semibold">Confirmada</span>
                             </td>
                             <td class="px-4 py-3 text-center">
@@ -67,13 +70,16 @@
                                     class="text-red-500 hover:underline text-sm">Cancelar</button>
                             </td>
                         </tr>
+                        <!-- Más filas iguales -->
                         <tr class="bg-slate-100 rounded-lg">
                             <td class="px-4 py-3 font-medium">HIIT</td>
                             <td class="px-4 py-3">11/06/2025</td>
                             <td class="px-4 py-3">12:00 - 12:30</td>
                             <td class="px-4 py-3">Paula Ruiz</td>
-                            <td class="px-4 py-3"><span
-                                    class="px-2 py-1 text-yellow-700 bg-yellow-100 rounded-full text-xs font-semibold">En lista de espera</span>
+                            <td class="px-4 py-3">
+                                <span
+                                    class="px-2 py-1 text-yellow-700 bg-yellow-100 rounded-full text-xs font-semibold">En
+                                    lista de espera</span>
                             </td>
                             <td class="px-4 py-3 text-center">
                                 <button onclick="openModal('HIIT')"
@@ -85,15 +91,63 @@
                             <td class="px-4 py-3">13/06/2025</td>
                             <td class="px-4 py-3">20:00 - 21:00</td>
                             <td class="px-4 py-3">Carolina Pérez</td>
-                            <td class="px-4 py-3"><span
+                            <td class="px-4 py-3">
+                                <span
                                     class="px-2 py-1 text-red-700 bg-red-100 rounded-full text-xs font-semibold">Cancelada</span>
                             </td>
                             <td class="px-4 py-3 text-center">—</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <!-- Versión móvil (cards) -->
+                <div class="space-y-4 md:hidden">
+                    <!-- Card -->
+                    <div class="bg-slate-100 p-4 rounded-lg shadow">
+                        <p><span class="font-semibold">Clase:</span> Bodypump</p>
+                        <p><span class="font-semibold">Fecha:</span> 10/06/2025</p>
+                        <p><span class="font-semibold">Hora:</span> 19:00 - 20:00</p>
+                        <p><span class="font-semibold">Instructor:</span> Laura Sánchez</p>
+                        <p><span class="font-semibold">Estado:</span>
+                            <span
+                                class="px-2 py-1 text-green-700 bg-green-100 rounded-full text-xs font-semibold">Confirmada</span>
+                        </p>
+                        <div class="mt-2 text-right">
+                            <button onclick="openModal('Bodypump')"
+                                class="text-red-500 hover:underline text-sm">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 p-4 rounded-lg shadow">
+                        <p><span class="font-semibold">Clase:</span> HIIT</p>
+                        <p><span class="font-semibold">Fecha:</span> 11/06/2025</p>
+                        <p><span class="font-semibold">Hora:</span> 12:00 - 12:30</p>
+                        <p><span class="font-semibold">Instructor:</span> Paula Ruiz</p>
+                        <p><span class="font-semibold">Estado:</span>
+                            <span class="px-2 py-1 text-yellow-700 bg-yellow-100 rounded-full text-xs font-semibold">En
+                                lista de espera</span>
+                        </p>
+                        <div class="mt-2 text-right">
+                            <button onclick="openModal('HIIT')"
+                                class="text-red-500 hover:underline text-sm">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-100 p-4 rounded-lg shadow">
+                        <p><span class="font-semibold">Clase:</span> Zumba</p>
+                        <p><span class="font-semibold">Fecha:</span> 13/06/2025</p>
+                        <p><span class="font-semibold">Hora:</span> 20:00 - 21:00</p>
+                        <p><span class="font-semibold">Instructor:</span> Carolina Pérez</p>
+                        <p><span class="font-semibold">Estado:</span>
+                            <span
+                                class="px-2 py-1 text-red-700 bg-red-100 rounded-full text-xs font-semibold">Cancelada</span>
+                        </p>
+                        <div class="mt-2 text-right text-sm text-gray-500">—</div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Modal Cancelación -->
@@ -101,7 +155,8 @@
         <div class="bg-white rounded-xl shadow-lg p-6 w-full max-w-sm">
             <h3 class="text-xl font-bold mb-4 text-red-600">¿Cancelar esta clase?</h3>
             <p class="text-sm text-gray-600 mb-6">Esta acción no se puede deshacer. ¿Estás seguro de que deseas cancelar
-                <span id="modal-class-name" class="font-semibold text-gray-900"></span>?</p>
+                <span id="modal-class-name" class="font-semibold text-gray-900"></span>?
+            </p>
             <div class="flex justify-end gap-3">
                 <button onclick="closeModal()"
                     class="px-4 py-2 rounded bg-slate-200 hover:bg-slate-300 text-sm">Cerrar</button>
