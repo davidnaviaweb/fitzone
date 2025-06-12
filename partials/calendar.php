@@ -69,6 +69,7 @@
         const calendar = new FullCalendar.Calendar(calendarEl, {
             initialView: isMobile ? 'timeGridDay' : 'timeGridWeek',
             locale: 'es',
+            firstDay: 1,
             allDaySlot: false,
             slotMinTime: "09:00:00",
             slotMaxTime: "21:00:00",

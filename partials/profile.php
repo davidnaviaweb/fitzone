@@ -38,8 +38,10 @@
                 <h2 class="text-2xl font-bold text-sky-700">Reservas activas</h2>
 
                 <!-- Filtro -->
-                <input type="date"
-                    class="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring focus:ring-sky-300" />
+                <label for="date" class="text-sm text-gray-600">Filtrar por fecha:
+                    <input type="date"
+                        class="border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none focus:ring focus:ring-sky-300" />
+                </label>
             </div>
 
             <div class="overflow-x-auto">
